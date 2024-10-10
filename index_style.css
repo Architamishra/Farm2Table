@@ -1,0 +1,615 @@
+* {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:0;
+    padding:0;
+}
+
+header{
+    padding-top: 25px;
+    display: flex;
+    background-color: rgb(201, 238, 201);
+    color: green;
+}
+
+.logo img{
+    height: 70px;
+    border-radius: 15px;
+    border: 2px solid rgb(178, 234, 178);
+    object-fit: cover;
+}
+
+.logo{
+    margin-left:130px;
+    width: 5%;
+}
+
+.address{
+    margin-left: 100px;
+    width: 10%;
+}
+
+.address p{
+    font-weight: 1000;
+    text-decoration: wavy;
+}
+
+.search_item{
+    margin-top: 20px;
+    margin-left: 130px;
+    display: flex;
+}
+
+.search_item input{
+    width: 450px;
+    height: 42px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 10px;
+    border: 2px solid rgb(178, 234, 178);
+    font-size: 15px;
+}
+
+.search_item input:focus{
+    background-color: rgb(222, 239, 222);
+    border: 2px solid lightgreen;
+}
+
+.search_item_button button{
+    height: 45px;
+    width: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    background-color: rgb(135, 222, 135);
+    border: 2px solid rgb(135, 222, 135);
+}
+
+.search_item_button button:hover{
+    background-color: yellowgreen;
+}
+
+.account{
+    margin-left: 150px;
+    margin-top: 20px;
+}
+
+.account select{
+    background: none;
+    border-style: none;
+    font-size: 18px;
+    color: green;
+    padding: 7px;
+    border-radius: 15px;
+}
+
+.account select:hover{
+    background-color: rgb(173, 222, 173);
+}
+
+.account select option[value=""]{
+    display: none;
+}
+
+.account select option{
+    color: green;
+    background-color: lightyellow;
+}
+
+.navbar_section{
+    padding-top: 50px;
+    display: flex;
+    background-color: rgb(201, 238, 201);
+    position: sticky;
+    top: 0px;
+    z-index:999;
+}
+
+.category_selection{
+    margin-left: 170px;
+    width: 10%;
+}
+
+.category_selection select{
+    color: green;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid lightgreen;
+}
+
+.category_selection select option{
+    color: green;
+    background-color: white;
+}
+
+.category_selection select:hover{
+    background-color: rgb(173, 222, 173);
+    color:green;
+}
+
+.category_selection select option[value=""]{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 200px;
+    margin-bottom: 25px;
+    width:60%;
+}
+
+.nav nav ul li{
+    list-style: none;
+    padding-left:30px;
+}
+
+.nav nav ul{
+    display: flex;
+}
+
+.nav nav ul li a{
+    text-decoration: none;
+    color: green;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.nav nav ul li a:hover{
+    background-color: rgb(173, 222, 173);
+    box-shadow: 5px 5px 15px rgb(51, 198, 51);
+    border: 2px solid lightgreen;
+}
+
+.cart{
+    margin-top: 0px;
+    margin-left: 50px;
+}
+
+.cart button{
+    padding-top: 7px;
+    padding-bottom:7px;
+    padding-right: 13px;
+    padding-left: 13px;
+    height: 40px;
+    background-color: white;
+    color: green;
+    font-size: 15px;
+    border-radius: 15px;
+    margin-left: 20px;
+    border: 2px solid rgb(116, 241, 116);
+}
+
+.cart button:hover{
+    background-color: green;
+    color:white;
+}
+
+.slider{
+    position:relative;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background-color: rgb(201, 238, 201);
+    color: green;
+}
+
+.slider .little_intro{
+    margin-left: 150px;
+    margin-right: 50px;
+}
+
+.slider .little_intro h1{
+    font-size: 70px;
+    font-style: italic;
+    text-shadow: 15px 15px rgb(163, 185, 163);
+}
+
+.slider .little_intro button{
+    margin-top: 30px;
+    height: 50px;
+    width: 300px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+
+.slider .little_intro button:hover{
+    background-color: white;
+    color: green;
+}
+.slider .slides{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.slider img{
+    width: 800px;
+    display:none;
+    height: 500px;
+    background-size: cover;
+    margin-right: 120px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+img.displaySlide{
+    display:block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider .little_intro p{
+    margin-top: 50px;
+}
+
+.previous{
+    left:0;
+}
+
+.next{
+    right:0;
+}
+
+@keyframes fade{
+    from{opacity: .5}
+    to{opacity: 1;}
+}
+
+#category{
+    background-color: rgb(201, 238, 201);
+    color: green;
+    padding-bottom: 100px;
+}
+
+#category h1{
+    text-align: center;
+    padding-top: 25px;
+    letter-spacing: 20px;
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+#category .category_grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 60px 0px 0px 170px;
+    gap: 100px;
+}
+
+#category .category_grid_item{
+    border-radius: 20px;
+    height: 340px;
+    width: 300px;
+    border: 2px dotted green;
+    box-shadow: 5px 5px 15px green;
+}
+
+#category .category_grid_item:hover{
+    background-color: rgb(156, 199, 156);
+    border: 5px dashed green;
+}
+
+#category .category_grid_item .image img{
+    display: block;
+    height: 200px;
+    border-radius: 15px;
+    margin-left: 50px;
+    object-fit: cover;
+    margin-top: 15px;
+    width: 200px;
+}
+
+#category .category_grid_item .content p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+#about_us{
+    display:flex;
+    flex:1;
+    background-color: rgb(201, 238, 201);
+    color: green;
+    position: relative ;
+    height: 800px;
+}
+
+#about_us .about_image{
+    margin: 40px 150px ;
+}
+
+#about_us .about_image img{
+    margin-top: 120px;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.image1,.image2{
+    position: absolute;
+}
+
+.image1{
+    top: 160px;
+    left: 200px;
+}
+
+.image1:hover, .image2:hover{
+    z-index: 1;
+    box-shadow: 10px 10px 15px green;
+}
+
+#about_us .about_image h1{
+    width: 500px;
+    font-size: 100px;
+    text-decoration: underline;
+}
+
+#about_us .about_features .features{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#about_us .about_features{
+    margin-top: 300px;
+    margin-left: -100px;
+}
+
+#about_us .about_features .features .features_cell{
+    display:flex;
+    flex:1;
+    margin-right: 70px;
+}
+
+.features_cell img{
+    height: 90px;
+    border-radius: 50%;
+}
+
+#about_us .about_features .features{
+    margin-top: 30px;
+}
+
+#about_us .about_features p:first-child{
+    width: 700px;
+}
+
+#about_us .about_features .features .features_cell .description{
+    margin-left: 20px;
+}
+
+#about_us .about_features .features .features_cell{
+    margin-bottom: 30px;
+}
+
+#best_selling{
+    background-color: rgb(201, 238, 201);
+    color: green;
+    height: 1050px;
+}
+
+#best_selling h1{
+    margin-left: 100px;
+    font-size: 90px;
+    text-decoration: underline;
+}
+
+#best_selling .best_selling_items{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:40px;
+    width: 1150px;
+    padding-left: 100px;
+}
+
+.items_col1{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgb(15, 180, 15);
+    border: 4px solid green;
+}
+
+.items_col2{
+    grid-column-start:3;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:4;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgb(15, 180, 15);
+    border: 4px solid green;
+}
+
+.items_row1, .items_row2, .items_row3{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgb(15, 180, 15);
+    border: 4px solid green;
+}
+
+#best_selling .best_selling_items{
+    margin: 40px 250px;
+}
+
+.best_selling_items_image img{
+    margin: 20px 10px 20px 35px;
+    border-radius: 20px;
+    object-fit: cover;
+    width:150px;
+    height: 150px;
+}
+
+.best_selling_items_description{
+    margin-bottom: 20px;
+}
+
+.items_row1, .items_row2, .items_row3{
+    display: flex;
+    width: 450px;
+}
+
+.items_col1, .items_col2{
+    width: 300px;
+}
+
+ .best_selling_items_description p span{
+    font-size: small;
+    text-decoration: line-through;
+}
+
+ .best_selling_items_description p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+ .best_selling_items_description button{
+    height: 40px;
+    width: 150px;
+    border-radius: 15px;
+    background-color: green;
+    color: white;
+    border: 4px solid rgb(54, 139, 54);
+}
+
+ .best_selling_items_description button:hover{
+    background-color: rgb(9, 80, 9);
+}
+
+ .items_col1 .best_selling_items_image img, .items_col2 .best_selling_items_image img{
+    margin-top: 70px;
+    height: 400px;
+    width: 230px;
+    object-fit: cover;
+}
+
+ .items_col1 .best_selling_items_description, .items_col2 .best_selling_items_description{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.items_col1 .best_selling_items_description p, .items_col2 .best_selling_items_description p{
+    text-align: center;
+}
+
+#contact{
+    background-color: rgb(201, 238, 201);
+    color: green;
+    height: 500px;
+    padding-top: 40px;
+}
+
+#contact h1{
+    font-size: 90px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#contact p{
+    font-style: italic;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#contact form{
+    margin: 20px 500px;
+}
+
+#contact form label{
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 150px;
+}
+
+#contact form input{
+    margin-left: 20px;
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: lightgreen;
+    border: 3px solid lightgreen;
+    font-size: 15px;
+}
+
+#contact form textarea{
+    margin-left: 10px;
+    width: 500px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: lightgreen;
+    border: 3px solid lightgreen;
+    font-size: 15px;
+}
+
+#contact form input[type="submit"]{
+    margin: 30px 400px; 
+    width: 200px;
+    height: 40px;
+    background-color: green;
+    color: white;
+}
+
+#contact form input[type="submit"]:hover{
+    background-color: white;
+    color: green
+}
+
+footer{
+    padding-top: 30px;
+    background-color: rgb(10, 75, 10);
+    color: white;
+}
+
+footer .for_flex{
+    margin-top: 20px;;
+    display: flex;
+    justify-content: space-around;
+}
+
+.for_flex div ul li{
+    list-style: none;
+}
+
+.for_flex .social_media ul{
+    margin-top: 10px;
+    display: flex;
+}
+
+.for_flex .social_media ul li{
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+.for_flex .social_media ul li:hover{
+    padding: 5px 15px;
+    border-radius: 50%;
+    background-color: rgb(15, 98, 15);
+}
+
+footer h1{
+    margin-left: 100px;
+    text-decoration: underline;
+}
+
+.for_flex h2{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+footer p:last-child{
+    margin-top: 30px;;
+    text-align: center;
+    font-style: italic;
+}
